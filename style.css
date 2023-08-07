@@ -1,0 +1,297 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5f7ff;
+  color: #1e73be;
+  padding: 3rem 1rem;
+  width: 100%;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.welcomeMsg {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1rem;
+}
+
+.introContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  padding: 1rem 2rem;
+  border-top: 1px solid #1e73be;
+  border-bottom: 1px solid #1e73be;
+}
+
+.introList {
+  padding-left: 1rem;
+  font-size: 0.825rem;
+}
+
+.introHeading {
+  font-size: 1rem;
+}
+
+.publicRoutesContainer {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.routesHeading {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.route {
+  display: flex;
+  justify-content: start;
+  justify-items: start;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.routeMethod {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.routeURL {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.method {
+  text-transform: uppercase;
+  font-size: 0.825rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.url,
+.copyright {
+  font-size: 0.825rem;
+}
+.url:hover {
+  text-decoration: underline;
+  text-underline-offset: 2.25px;
+}
+
+.routesGrid {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 1rem;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 0.825rem;
+  margin-bottom: 0.25rem;
+}
+
+li {
+  list-style-type: decimal;
+}
+
+.linksContainer {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  gap: 1rem;
+}
+
+footer {
+  background-color: #1e73be;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  border-top: 2px solid #e5f7ff;
+  color: #e5f7ff;
+}
+
+.testRoute {
+  position: relative;
+}
+.test {
+  background-color: rgb(255, 136, 136);
+  font-size: 0.625rem;
+  color: white;
+  padding: 0.075rem 0.25rem 0.125rem 0.25rem;
+  border-radius: 5px;
+  letter-spacing: 0.75px;
+  position: absolute;
+  top: -2px;
+  right: -3.75px;
+}
+
+/* 404 Page */
+.body404 {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  color: #1e73be;
+}
+
+.title404 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.homeBtn404 {
+  text-decoration: underline;
+  text-underline-offset: 2.5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.paragragh404 {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 576px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+  .welcomeMsg,
+  .introHeading,
+  .routesHeading {
+    font-size: 1.25rem;
+  }
+  .introList,
+  .method,
+  .url,
+  .copyright,
+  h5 {
+    font-size: 1rem;
+  }
+
+  /* 404 Page */
+  .title404 {
+    font-size: 1.75rem;
+  }
+  .homeBtn404,
+  .paragragh404 {
+    font-size: 1.125rem;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 768px) {
+  .routesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .introContainer {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.75rem;
+    place-content: center;
+    place-items: center;
+    align-content: center;
+    align-items: center;
+  }
+  .introHeading {
+    grid-column: 1 / span 2;
+  }
+  .introList {
+    grid-column: 3 / span 3;
+    padding-left: 0;
+    max-width: 450px;
+  }
+  .test {
+    position: absolute;
+    top: -2px;
+    right: 1px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .routesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  .introContainer {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.75rem;
+    place-content: center;
+    place-items: center;
+    align-content: center;
+    align-items: center;
+  }
+  .introHeading {
+    grid-column: 1 / span 2;
+  }
+  .introList {
+    grid-column: 3 / span 3;
+    padding-left: 0;
+    max-width: 450px;
+  }
+  .test {
+    position: absolute;
+    top: -2px;
+    right: 1px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .routesGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+  .introContainer {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    place-content: center;
+    place-items: center;
+    align-content: center;
+    align-items: center;
+  }
+  .introHeading {
+    grid-column: 1 / span 2;
+  }
+  .introList {
+    grid-column: 3 / span 3;
+    padding-left: 0;
+    max-width: 450px;
+  }
+  body {
+    padding: 3rem 2rem;
+  }
+  .test {
+    top: -2px;
+    right: 1px;
+  }
+}

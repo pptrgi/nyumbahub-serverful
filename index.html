@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NyumbaHub API - An API for Vacant Houses in Kenya</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h2>NyumbaHub API</h2>
+    <div class="welcomeMsg">
+      <p>Welcome to NyumbaHub vacant houses API</p>
+    </div>
+    <div class="introContainer">
+      <h4 class="introHeading">Here's what you need to know:</h4>
+      <div class="introList">
+        <ul>
+          <li>
+            <strong><a href="#publicEndpoints">Public Endpoints</a></strong>
+            routes are accessible by all users.
+            <strong
+              ><a href="#protectedEndpoints">Protected Endpoints</a></strong
+            >
+            routes are not directly available to the public and either require
+            signing in first or can only be accessed by special/privileged users
+          </li>
+          <li>
+            Click on a route to visit it. <strong>Sign in</strong> to access
+            majority of routes, <strong>register</strong> first if you haven't
+          </li>
+          <li>
+            Use a REST Client like Postman, Swagger, Thunder Client etc for POST
+            in user register and login, and other HTTP methods but GET
+          </li>
+          <li>
+            Routes with <strong>"test"</strong> tag provide a sneak peek of
+            returned route data
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="publicRoutesContainer" id="publicEndpoints">
+      <h4 class="routesHeading">Public Endpoints</h4>
+      <div class="route">
+        <div class="routeMethod">
+          <span class="method">get</span>
+          <span class="method">post</span>
+          <span class="method">post</span>
+        </div>
+        <div class="routeURL">
+          <span class="url"
+            ><a
+              href="/.netlify/functions/api/property/all-properties?page=1&limit=10&sort=nameSlug&fields=name,description,type,price,category,bedrooms,bathrooms,features,location,-_id"
+              >/property/all-properties</a
+            ></span
+          >
+          <span class="url"
+            ><a href="/.netlify/functions/api/user/register"
+              >/user/register</a
+            ></span
+          >
+          <span class="url"
+            ><a href="/.netlify/functions/api/user/login">/user/login</a></span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="protectedRoutesContainer" id="protectedEndpoints">
+      <h4 class="routesHeading">Protected Endpoints</h4>
+      <div class="routesGrid">
+        <div class="routeCategory">
+          <h5>Users</h5>
+          <div class="route">
+            <div class="routeMethod">
+              <span class="method">put</span>
+              <span class="method">get</span>
+              <span class="method">get</span>
+              <span class="method">put</span>
+              <span class="method">put</span>
+              <span class="method">put</span>
+              <span class="method">put</span>
+              <span class="method">put</span>
+              <span class="method">delete</span>
+              <span class="method">get</span>
+              <span class="method">get</span>
+            </div>
+            <div class="routeURL">
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/change-password"
+                  >/user/change-password</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/logout"
+                  >/user/logout</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/generate-token"
+                  >/user/generate-token</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/forgot-password-token/"
+                  >/forgot-password-token</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/block-user/:id"
+                  >/user/block-user/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/unblock-user/:id"
+                  >/user/unblock-user/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a
+                  href="/.netlify/functions/api/user/reset-password/:resetToken"
+                  >/reset-password/:token</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/ser/update/:userId"
+                  >/user/update/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/delete/:userId"
+                  >/user/delete/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/:userId"
+                  >/user/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/user/all">/user/all</a></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="routeCategory">
+          <h5>Properties</h5>
+          <div class="route">
+            <div class="routeMethod">
+              <span class="method">post</span>
+              <span class="method">put</span>
+              <span class="method">put</span>
+              <span class="method">put</span>
+              <span class="method">delete</span>
+              <span class="method">get</span>
+            </div>
+            <div class="routeURL">
+              <span class="url"
+                ><a href="/.netlify/functions/api/property/add"
+                  >/property/add</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/property/wishlist/:propertyId"
+                  >/property/wishlist/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a
+                  href="/.netlify/functions/api/property/add-review/:propertyId"
+                  >/property/add-review/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a
+                  href="/.netlify/functions/api/property/upload-image/:propertyId"
+                  >/upload-image/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/property/delete/:propertyId"
+                  >/property/delete/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/property/:propertyId"
+                  >/property/:id</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="routeCategory">
+          <h5>Categories</h5>
+          <div class="route">
+            <div class="routeMethod">
+              <span class="method">post</span>
+              <span class="method">delete</span>
+              <div class="testRoute">
+                <span class="test">test</span>
+                <span class="method">get</span>
+              </div>
+            </div>
+            <div class="routeURL">
+              <span class="url"
+                ><a href="/.netlify/functions/api/category/create"
+                  >/category/create</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/category/delete/:categoryId"
+                  >/category/delete/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a
+                  href="/.netlify/functions/api/category/64b23f843567c004de3bf4c9"
+                  >/category/:id</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="routeCategory">
+          <h5>Types</h5>
+          <div class="route">
+            <div class="routeMethod">
+              <span class="method">post</span>
+              <span class="method">delete</span>
+              <div class="testRoute">
+                <span class="test">test</span>
+                <span class="method">get</span>
+              </div>
+            </div>
+            <div class="routeURL">
+              <span class="url"
+                ><a href="/.netlify/functions/api/type/create"
+                  >/type/create</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/type/delete/:typeId"
+                  >/type/delete/:id</a
+                ></span
+              >
+              <span class="url"
+                ><a href="/.netlify/functions/api/type/64b23df23567c004de3bf49b"
+                  >/type/:id</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="linksContainer">
+      <h4 class="routesHeading">External Links</h4>
+      <div class="links">
+        <a
+          href="https://github.com/pptrgi/nyumbahub_api_serverless_function"
+          class="url"
+          >View project on GitHub</a
+        >
+        <a href="mailto:pptrgitonga@gmail.com" class="url">Contact me</a>
+        <a href="https://ptrgitonga.vercel.app" class="url">See my Portfolio</a>
+        <a
+          href="https://github.com/pptrgi/nyumbahub_api_serverless_function"
+          class="url"
+          >Contribute to Project</a
+        >
+      </div>
+    </div>
+    <footer>
+      <div class="copyright">
+        &#169; A product of <strong>Lifen Creatives</strong>. All rights
+        reserved.
+      </div>
+    </footer>
+  </body>
+</html>
