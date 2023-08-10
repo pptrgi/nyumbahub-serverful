@@ -22,6 +22,7 @@ const {
   updateUser,
   deleteUser,
 } = require("../controllers/userControllers/getUpdateDeleteUser");
+const getUserWishlist = require("../controllers/userControllers/getUserWishlist");
 
 // property imports
 const addProperty = require("../controllers/propertyControllers/addPropertyController");
@@ -55,6 +56,7 @@ router.put("/user/change-password", verifyAuthToken, changeUserPassword);
 router.get("/user/logout", verifyAuthToken, logoutUser);
 router.get("/user/generate-token", verifyAuthToken, generateToken);
 router.get("/user/all", verifyAuthToken, isAdmin, getAllUsers);
+router.get("/user/wishlist", verifyAuthToken, getUserWishlist);
 router.put("/user/forgot-password-token", emailForgotPasswordLink);
 router.put(
   "/user/block-user/:id",
