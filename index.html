@@ -57,18 +57,14 @@
         <div class="routeURL">
           <span class="url"
             ><a
-              href="/.netlify/functions/api/property/all-properties?page=1&limit=10&sort=nameSlug&fields=name,description,type,price,category,bedrooms,bathrooms,features,location,-_id"
+              href="/api/property/all-properties?page=1&limit=10&sort=nameSlug&fields=name,description,type,price,category,bedrooms,bathrooms,features,location,-_id"
               >/property/all-properties</a
             ></span
           >
           <span class="url"
-            ><a href="/.netlify/functions/api/user/register"
-              >/user/register</a
-            ></span
+            ><a href="/api/user/register">/user/register</a></span
           >
-          <span class="url"
-            ><a href="/.netlify/functions/api/user/login">/user/login</a></span
-          >
+          <span class="url"><a href="/api/user/login">/user/login</a></span>
         </div>
       </div>
     </div>
@@ -94,60 +90,47 @@
             </div>
             <div class="routeURL">
               <span class="url"
-                ><a href="/.netlify/functions/api/user/change-password"
+                ><a href="/api/user/change-password"
                   >/user/change-password</a
                 ></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/user/logout"
-                  >/user/logout</a
-                ></span
+                ><a href="/api/user/logout">/user/logout</a></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/user/generate-token"
+                ><a href="/api/user/generate-token"
                   >/user/generate-token</a
                 ></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/user/forgot-password-token/"
+                ><a href="/api/user/forgot-password-token/"
                   >/forgot-password-token</a
                 ></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/user/block-user/:id"
+                ><a href="/api/user/block-user/:id"
                   >/user/block-user/:id</a
                 ></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/user/unblock-user/:id"
+                ><a href="/api/user/unblock-user/:id"
                   >/user/unblock-user/:id</a
                 ></span
               >
               <span class="url"
-                ><a
-                  href="/.netlify/functions/api/user/reset-password/:resetToken"
+                ><a href="/api/user/reset-password/:resetToken"
                   >/reset-password/:token</a
                 ></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/ser/update/:userId"
-                  >/user/update/:id</a
-                ></span
+                ><a href="/api/ser/update/:userId">/user/update/:id</a></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/user/delete/:userId"
-                  >/user/delete/:id</a
-                ></span
+                ><a href="/api/user/delete/:userId">/user/delete/:id</a></span
               >
+              <span class="url"><a href="/api/user/:userId">/user/:id</a></span>
               <span class="url"
-                ><a href="/.netlify/functions/api/user/:userId"
-                  >/user/:id</a
-                ></span
-              >
-              <span class="url"
-                ><a href="/.netlify/functions/api/user/wishlist"
-                  >/user/wishlist</a
-                ></span
+                ><a href="/api/user/wishlist">/user/wishlist</a></span
               >
             </div>
           </div>
@@ -168,35 +151,30 @@
             </div>
             <div class="routeURL">
               <span class="url"
-                ><a href="/.netlify/functions/api/property/add"
-                  >/property/add</a
-                ></span
+                ><a href="/api/property/add">/property/add</a></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/property/wishlist/:propertyId"
+                ><a href="/api/property/wishlist/:propertyId"
                   >/property/wishlist/:id</a
                 ></span
               >
               <span class="url"
-                ><a
-                  href="/.netlify/functions/api/property/add-review/:propertyId"
+                ><a href="/api/property/add-review/:propertyId"
                   >/property/add-review/:id</a
                 ></span
               >
               <span class="url"
-                ><a
-                  href="/.netlify/functions/api/property/upload-image/:propertyId"
+                ><a href="/api/property/upload-image/:propertyId"
                   >/upload-image/:id</a
                 ></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/property/delete/:propertyId"
+                ><a href="/api/property/delete/:propertyId"
                   >/property/delete/:id</a
                 ></span
               >
               <span class="url"
-                ><a
-                  href="/.netlify/functions/api/property/64b8ea60f79675aae0037183"
+                ><a href="/api/property/64b8ea60f79675aae0037183"
                   >/property/:id</a
                 ></span
               >
@@ -216,18 +194,15 @@
             </div>
             <div class="routeURL">
               <span class="url"
-                ><a href="/.netlify/functions/api/category/create"
-                  >/category/create</a
-                ></span
+                ><a href="/api/category/create">/category/create</a></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/category/delete/:categoryId"
+                ><a href="/api/category/delete/:categoryId"
                   >/category/delete/:id</a
                 ></span
               >
               <span class="url"
-                ><a
-                  href="/.netlify/functions/api/category/64b23f843567c004de3bf4c9"
+                ><a href="/api/category/64b23f843567c004de3bf4c9"
                   >/category/:id</a
                 ></span
               >
@@ -247,17 +222,13 @@
             </div>
             <div class="routeURL">
               <span class="url"
-                ><a href="/.netlify/functions/api/type/create"
-                  >/type/create</a
-                ></span
+                ><a href="/api/type/create">/type/create</a></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/type/delete/:typeId"
-                  >/type/delete/:id</a
-                ></span
+                ><a href="/api/type/delete/:typeId">/type/delete/:id</a></span
               >
               <span class="url"
-                ><a href="/.netlify/functions/api/type/64b23df23567c004de3bf49b"
+                ><a href="/api/type/64b23df23567c004de3bf49b"
                   >/type/:id</a
                 ></span
               >
@@ -270,15 +241,11 @@
     <div class="linksContainer">
       <h4 class="routesHeading">External Links</h4>
       <div class="links">
-        <a
-          href="https://github.com/pptrgi/nyumbahub_api_serverless_function"
-          class="url"
+        <a href="https://github.com/pptrgi/nyumbahub-serverful" class="url"
           >View project on GitHub</a
         >
         <a href="mailto:pptrgitonga@gmail.com" class="url">Contact us</a>
-        <a
-          href="https://github.com/pptrgi/nyumbahub_api_serverless_function"
-          class="url"
+        <a href="https://nyumbahub.vercel.app" class="url" id="frontendLink"
           >Go to NyumbaHub Website</a
         >
         <a href="https://ptrgitonga.vercel.app" class="url">See Portfolio</a>
