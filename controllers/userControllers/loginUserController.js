@@ -39,9 +39,20 @@ const loginUser = async (req, res) => {
 
     res.cookie("jwt", refreshToken, {
       httpOnly: true,
+      secure: true,
       maxAge: 72 * 60 * 60 * 1000,
     });
-    res.status(200).json({ user: foundUser, accessToken });
+
+    res.status(200).json({
+      user: {
+        firstName: foundUser.firstName,
+        lastName: foundUser.lastName,
+        email: foundUser.email,
+        phone: foundUser.phone,
+        id: foundUser._id,
+      },
+      accessToken,
+    });
   } catch (error) {
     console.log(error);
     res.sendStatus(500);
