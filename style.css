@@ -180,6 +180,14 @@ footer {
   color: white;
 }
 
+#frontendLink {
+  color: #00aeff;
+}
+
+.paragraphLink :hover {
+  color: #00aeff;
+}
+
 /* 404 Page */
 .body404 {
   display: flex;
@@ -191,10 +199,6 @@ footer {
   width: 100vw;
   background-color: var(--body-color);
   color: var(--text-color);
-}
-
-#frontendLink {
-  color: #00aeff;
 }
 
 .title404 {
