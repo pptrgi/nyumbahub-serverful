@@ -1,3 +1,3 @@
-## NyumbaHub Backend
+## NyumbaHub Serverful Backend
 
-Currently working on the readme file, coming soon.
+See the [overall application's ReadMe](https://github.com/nyumbahub-frontend)
